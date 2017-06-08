@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MPP.Views.Properties.PropertyForSale"
+             Title="Properties For Sale"
+             xmlns:ViewModels ="clr-namespace:MPP.ViewModels;assembly=MPP"
+             >
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Properties For Sale Page" FontSize="Large"/>
+        </StackLayout>
+    </ContentPage.Content>
+
+
+    <ContentPage.BindingContext>
+        <ViewModels:UsersViewModel/>
+    </ContentPage.BindingContext>
+
+    <ListView ItemsSource="{Binding UsersList}" HasUnevenRows="True">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <ViewCell>
+                    <StackLayout Orientation="Vertical" Padding="12,6">
+                        <Label Text="{Binding firstName}" FontSize="24"/>
+                        <Label Text="{Binding lastName}" FontSize="24"/>
+                        <Label Text="{Binding email}" FontSize="24"/>
+                        <Label Text="{Binding phone}" FontSize="24"/>
+                        <Label Text="{Binding status}" FontSize="24"/>
+                        <Label Text="{Binding reason}" FontSize="24"/>
+                        <Label Text="mmmmmm" FontSize="Large"/>
+                    </StackLayout>
+                </ViewCell>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

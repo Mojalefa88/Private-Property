@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MPP.Views.Users.Register">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="10" VerticalOptions="Center">
+
+                <Entry x:Name="txtFirstName" Placeholder="First Name" FontSize="Medium"/>
+                <Entry x:Name="txtLastName" Placeholder="Last Name" FontSize="Medium"/>
+                <Entry x:Name="txtEmail" Placeholder="Email" FontSize="Medium"/>
+                <Entry x:Name="txtPhone" Placeholder="Phone" FontSize="Medium"/>
+                <Entry x:Name="txtPassword" Placeholder="password" IsPassword="True"/>
+                <Entry x:Name="txtConfirmPassword" Placeholder="Confirm Password" FontSize="Medium"/>
+                
+                <!--<Entry x:Name="txtLastName" Placeholder="Last Name" FontSize="Medium"/>-->
+                <Button x:Name="btnRegister" Text="Register"/>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
